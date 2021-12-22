@@ -1,0 +1,21 @@
+body {
+    background-color: white;
+    
+}
+
+#NavbarMain {    
+    background-color: red;
+    border-bottom: 1px solid black;
+}
+
+#BrandText {
+    color: white;
+}
+
+#NavbarLinks {
+    color: white;
+}
+
+#basic-nav-dropdown {
+    color: white;
+}

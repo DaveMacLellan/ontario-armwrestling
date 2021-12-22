@@ -1,0 +1,66 @@
+.rankButton {
+    color: white;
+    background-color: red;
+    border: 2px solid black;
+}
+
+.cardGrid {
+    display: block;
+    margin: auto;
+    padding: 50px;
+}
+
+.rankCard {
+    height: 455px;
+    width: 100%;
+    margin: auto;
+    border: 2px solid red;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.rankCardImage {
+    height: 350px;
+}
+
+@media screen and (max-width: 992px) {
+    .rankCard {
+        height: 305px;
+        width: 100%;
+        margin: auto;
+    }
+    .rankCardImage {
+        height: 300px;
+    }
+
+    .cardText {
+        font-size: 70px;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); 
+    }
+}
+  
+@media screen and (max-width: 600px) {
+  .rankCard {
+      height: 305px;
+      width: 100%;
+      margin: auto;
+  }
+  .rankCardImage {
+      height: 300px;
+  }
+  .cardText {
+      font-size: 80px;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); 
+  }
+}

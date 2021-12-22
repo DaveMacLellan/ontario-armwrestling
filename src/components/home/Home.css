@@ -1,0 +1,113 @@
+.homePageImage {
+    background-color: white;
+    background-size: cover;
+    background-position: top;
+    min-height: 100%;
+    min-width: 100%;
+    height: 100vh;
+    width: 100vw;
+    position: relative;  
+}
+
+div {
+  display: block;
+}
+
+h1 {
+  color: white;
+}
+
+.lastNextEvents {
+  display: block;
+  width: 100%;
+}
+
+.lastNextEvents a {
+  position: relative;
+  display: flex;
+}
+
+.lastEvent {
+  border-right: 2px black solid;
+  color: red;
+}
+
+.lastEventImage {
+  margin: 5px;
+}
+
+.nextEventImage {
+  margin: 5px;
+}
+
+.eventImg {
+  height: 100px;
+}
+
+.nextEvent {
+  color: red;
+}
+
+.lastEventTitle {
+  position: absolute;
+  color: black;
+  margin-bottom: 1rem;
+  line-height: .95rem;
+  text-align: right;
+}
+
+.nextEventTitle {
+  position: absolute;
+  color: black; 
+  margin-bottom: 1rem;
+  line-height: .95rem;
+  text-align: right;
+  margin-left: 65px;
+}
+
+.lastEventHeading {
+  position: static;
+  margin-top: 1.5rem;
+  text-align: right;
+}
+
+.nextEventHeading {
+  position: static;
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.eventTitle {
+  margin-top: 00.75rem;
+  font-size: 2.5rem;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.lastNextEvents {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px black solid;
+}
+
+.mainCarousel {
+  display: block;
+  width: 800px;
+  margin: auto;
+}
+
+@media screen and (max-width: 992px) {
+  .mainCarousel {
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mainCarousel {
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+}
