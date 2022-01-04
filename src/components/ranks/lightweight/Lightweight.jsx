@@ -34,7 +34,7 @@ export default function Lightweight() {
                 <Button className='rankButton' onClick={handleClick}>Ranks</Button>
                 <br></br>
                 <br></br>
-                    <Row xs={1} md={5} lg={5}>
+                    <Row xs={1} sm={2} md={3} lg={4} xl={5}>
                         {cardInfo.map((cardInfo, k) => (
                             <Col key={k} >
                                 <Card className='rankCard' bg='dark' text='light' >
@@ -42,7 +42,7 @@ export default function Lightweight() {
     
                                     <Card.Body>
                                         <Card.Title>{cardInfo.title}</Card.Title>
-                                        <Card.Text >
+                                        <Card.Text>
                                             {cardInfo.Rank}
                                             <br></br>
                                             {cardInfo.text}

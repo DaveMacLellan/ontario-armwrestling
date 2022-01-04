@@ -31,7 +31,7 @@
         margin: auto;
     }
     .rankCardImage {
-        height: 300px;
+        height: 200px;
     }
 
     .cardText {
@@ -45,17 +45,17 @@
     }
 }
   
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .rankCard {
       height: 305px;
-      width: 100%;
+      width: 75%;
       margin: auto;
   }
   .rankCardImage {
-      height: 300px;
+      height: 200px;
   }
   .cardText {
-      font-size: 80px;
+      font-size: 20px;
       margin: 0;
       position: absolute;
       top: 50%;
