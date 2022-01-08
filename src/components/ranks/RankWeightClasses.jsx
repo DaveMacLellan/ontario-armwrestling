@@ -1,6 +1,7 @@
 import './RankWeightClasses.css';
 import React, { Component, useState } from 'react'
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button, Container, Image, Card, Row, Col, ListGroup, ListGroupItem } from 'react-bootstrap'
+
 import Lightweight from './lightweight/Lightweight'
 import Middleweight from './middleweight/Middleweight'
 import Lightheavyweight from './lightheavyweight/Lightheavyweight'

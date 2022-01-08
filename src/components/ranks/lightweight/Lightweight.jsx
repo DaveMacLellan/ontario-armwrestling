@@ -1,31 +1,70 @@
-import './Lightweight.css';
-import React, { Component, useState } from 'react'
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button, Container, Image, Card, Row, Col, ListGroup, ListGroupItem } from 'react-bootstrap'
+import '../Ranks.css';
+import React, { useState, useEffect } from 'react'
+import { Button, Container, Card, Row, Col } from 'react-bootstrap'
+import { collection, getDocs } from 'firebase/firestore'
+import db from '../../../firebase/firebase'
 import RankWeightClasses from '../RankWeightClasses'
 
 export default function Lightweight() {
-    const cardInfo = [
-        {image: "https://www.goldsarm.com/storage/images/armwrestlers/49zwjBITG8.jpg", Rank:"Rank: 1", title: "Lightweight", text: "Weight:"},
-        {image: "https://www.goldsarm.com/storage/images/armwrestlers/OYuQnT1pqL.jpg", Rank:"Rank: 2", title: "Name", text: "Weight:"},
-        {image: "https://www.goldsarm.com/storage/images/armwrestlers/49zwjBITG8.jpg", Rank:"Rank: 3", title: "Name", text: "Weight:"},
-        {image: "https://www.goldsarm.com/storage/images/armwrestlers/OYuQnT1pqL.jpg", Rank:"Rank: 4", title: "Name", text: "Weight:"},
-        {image: "https://www.goldsarm.com/storage/images/armwrestlers/49zwjBITG8.jpg", Rank:"Rank: 5", title: "Name", text: "Weight:"},
-        {image: "https://www.goldsarm.com/storage/images/armwrestlers/OYuQnT1pqL.jpg", Rank:"Rank: 6", title: "Name", text: "Weight:"},
-        {image: "https://www.goldsarm.com/storage/images/armwrestlers/49zwjBITG8.jpg", Rank:"Rank: 7", title: "Name", text: "Weight:"},
-        {image: "https://www.goldsarm.com/storage/images/armwrestlers/OYuQnT1pqL.jpg", Rank:"Rank: 8", title: "Name", text: "Weight:"},
-        {image: "https://www.goldsarm.com/storage/images/armwrestlers/49zwjBITG8.jpg", Rank:"Rank: 9", title: "Name", text: "Weight:"},
-        {image: "https://www.goldsarm.com/storage/images/armwrestlers/OYuQnT1pqL.jpg", Rank:"Rank: 10", title: "Name", text: "Weight:"}
-    ];
 
-    const [visible, setVisisble] = useState(true);
-    const [whichComponentToShow, setWhichComponentToShow] = useState("MiddleWeight")
+const [athletes, setAthletes] = useState([]);
+//collection ref
+const athletesRef = collection(db, 'Athletes');    
+      
+    useEffect(() => {
+        const getAthletes = async () => {
+            const data = await getDocs(athletesRef);
+            setAthletes(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+        };
+
+        getAthletes()
+    }, []);
+    
+    const cloneAthletesLeft = [];   
+    const cloneAthletesRight = [];
+
+    for(var i in athletes){
+        if(athletes[i].weightClass == "Lightweight" && athletes[i].leftArm > 0){
+            cloneAthletesLeft[i] = athletes[i];
+        }
+    }
+    athletes.splice(0, cloneAthletesLeft)
+
+    for(var i in athletes){
+        if(athletes[i].weightClass == "Lightweight" && athletes[i].rightArm > 0){
+            cloneAthletesRight[i] = athletes[i];
+        }
+    }
+    athletes.splice(0, cloneAthletesRight)
+
+    const lightweightRanksLeft = cloneAthletesLeft.filter((el)=> {
+        return el !== null && typeof el !== 'undefined';
+    });
+
+    lightweightRanksLeft.sort((a, b) => {
+        return a.leftArm - b.leftArm;
+    })
+
+    const lightweightRanksRight = cloneAthletesRight.filter((el)=> {
+        return el !== null && typeof el !== 'undefined';
+    });
+
+    lightweightRanksRight.sort((a, b) => {
+        return a.rightArm - b.rightArm;
+    })
+    console.log(lightweightRanksRight)
+
+    //const [visible, setVisisble] = useState(true);
+    const [whichComponentToShow, setWhichComponentToShow] = useState("Lightweight")
 
     function handleClick(){
         setWhichComponentToShow("AllRanks")
     }
 
-    if(whichComponentToShow === "MiddleWeight"){
-        return(
+    if(whichComponentToShow === "Lightweight"){
+        
+        
+        return(            
             <Container className='rankPageImage'>
                 <div>
                     <h1>Lightweight Rankings 1-10</h1>
@@ -34,27 +73,61 @@ export default function Lightweight() {
                 <Button className='rankButton' onClick={handleClick}>Ranks</Button>
                 <br></br>
                 <br></br>
+                <h1>Right</h1>
+                <br></br>
+                <Row xs={1} sm={2} md={3} lg={4} xl={5}>
+                {lightweightRanksRight.map((lightweightRanksRight, k) => {
+                    return(
+                    
+                        <Col key={k} >
+                        <Card className='rankCard' bg='dark' text='light' >
+                            <Card.Img className='rankCardImage' src={lightweightRanksRight.profilePicture} fluid />
+
+                            <Card.Body>
+                                <Card.Title className='athleteName'>{lightweightRanksRight.name}</Card.Title>
+                                <Card.Text className='rankText'>
+                                    Rank: {lightweightRanksRight.rightArm}                                            
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                        <br></br>
+                        </Col>
+                                            
+                    );                            
+                })}
+                </Row> 
+                </div>
+                <div className='cardGrid'>
+                    
+                    <h1>Left</h1>
+                    <br></br>
                     <Row xs={1} sm={2} md={3} lg={4} xl={5}>
-                        {cardInfo.map((cardInfo, k) => (
+                    {lightweightRanksLeft.map((lightweightRanksLeft, k) => {
+                        return(
+                        
                             <Col key={k} >
-                                <Card className='rankCard' bg='dark' text='light' >
-                                    <Card.Img className='rankCardImage' src={cardInfo.image} fluid />
-    
-                                    <Card.Body>
-                                        <Card.Title>{cardInfo.title}</Card.Title>
-                                        <Card.Text>
-                                            {cardInfo.Rank}
-                                            <br></br>
-                                            {cardInfo.text}
-                                        </Card.Text>
-                                    </Card.Body>
-                                </Card>
-                                <br></br>
+                            <Card className='rankCard' bg='dark' text='light' >
+                                <Card.Img className='rankCardImage' src={lightweightRanksLeft.profilePicture} fluid />
+
+                                <Card.Body>
+                                    <Card.Title className='athleteName'>{lightweightRanksLeft.name}</Card.Title>
+                                    <Card.Text className='rankText'>
+                                        Rank: {lightweightRanksLeft.leftArm}                                            
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                            <br></br>
                             </Col>
-                        ))}
-                    </Row>
+                                                
+                        );                            
+                    })}
+                    </Row> 
+                </div>
+                <div>               
                     <Button className='rankButton' onClick={handleClick}>Ranks</Button>
-                </div>                        
+                    
+                </div>
+                <br></br>                       
             </Container>
         )
     }

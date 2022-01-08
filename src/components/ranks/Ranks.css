@@ -1,12 +1,7 @@
-.rankPageImage {
-    background-color: white;
-    background-size: cover;
-    background-position: top;
-    min-height: 100%;
-    min-width: 100%;
-    height: 100vh;
-    width: 100vw;
-    position: relative;  
+.rankButton {
+    color: white;
+    background-color: red;
+    border: 2px solid black;
 }
 
 .cardGrid {
@@ -16,31 +11,83 @@
 }
 
 .rankCard {
-    height: 400px;
+    height: 455px;
+    width: 100%;
     margin: auto;
     border: 2px solid red;
+    align-items: center;
+    text-align: center;
+    
 }
 
 .rankCardImage {
-    height: 300px;
+    height: 350px;
+}
+
+.rankText {
+    font-size: 15px;
+}
+
+.athleteName {
+    font-size: 20px;
+    margin-top: -5px;
 }
 
 @media screen and (max-width: 992px) {
     .rankCard {
-        height: 500px;
-        width: 400px;
+        height: 290px;
+        width: 100%;
         margin: auto;
     }
     .rankCardImage {
-        height: 400px;
+        height: 210px;
     }
-  }
+
+    .cardText {
+        font-size: 60px;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); 
+    }
+
+    .rankText {
+        font-size: 14px;
+    }
   
-  @media screen and (max-width: 600px) {
-    .rankCard {
-        height: 500px
+    .athleteName {
+        font-size: 16px;
+        margin-top: -5px;
     }
-    .rankCardImage {
-        height: 400px;
-    }
+}
+  
+@media screen and (max-width: 575px) {
+  .rankCard {
+      height: 290px;
+      width: 70%;
+      margin: auto;
   }
+  .rankCardImage {
+      height: 210px;
+  }
+  .cardText {
+      font-size: 60px;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); 
+  }
+
+  .rankText {
+      font-size: 14px;
+  }
+
+  .athleteName {
+      font-size: 16px;
+      margin-top: -5px;
+  }
+}
