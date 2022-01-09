@@ -224,10 +224,9 @@ export default function Clubs() {
             <Table variant="dark" responsive>
                 <thead>
                     <tr>
-                        <th>Club Lead</th>
                         <th>Club Name</th>
                         <th>Location</th>
-                        
+                        <th>Club Lead</th>
                     </tr>
                 </thead>
                 <tbody>
