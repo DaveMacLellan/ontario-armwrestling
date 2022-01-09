@@ -69,7 +69,7 @@ export default function Lightheavyweight() {
                 <Button className='rankButton' onClick={handleClick}>Ranks</Button>
                 <br></br>
                 <br></br>
-                <h1>Right</h1>
+                <h1>Right Arm</h1>
                 <br></br>
                 <Row xs={1} sm={2} md={3} lg={4} xl={5}>
                 {lightHeavyweightRanksRight.map((lightHeavyweightRanksRight, k) => {
@@ -95,7 +95,7 @@ export default function Lightheavyweight() {
                 </div>
                 <div className='cardGrid'>
                     
-                    <h1>Left</h1>
+                    <h1>Left Arm</h1>
                     <br></br>
                     <Row xs={1} sm={2} md={3} lg={4} xl={5}>
                     {lightHeavyweightRanksLeft.map((lightHeavyweightRanksLeft, k) => {

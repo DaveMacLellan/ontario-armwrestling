@@ -27,7 +27,7 @@ export default class NavbarComp extends Component {
                         <Nav.Link as={Link} to={"/clubs"} id='NavbarLinks'>Clubs</Nav.Link>
                         <NavDropdown title="Events" id="basic-nav-dropdown">
                         <NavDropdown.Item as={Link} to={"/ontarioevents"} id='NavbarLinksDrop'>Ontario</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2" id='NavbarLinksDrop'>Canada</NavDropdown.Item>
+                        
                         </NavDropdown>
                         <Nav.Link as={Link} to={"/socialmedia"} id='NavbarLinks'>Social Media</Nav.Link>
                     </Nav>

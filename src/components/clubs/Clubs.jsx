@@ -217,7 +217,7 @@ export default function Clubs() {
     ];
     
     return (        
-        <Container>
+        <Container className='clubBack'>
             <div>
                 <h1>Clubs</h1>
             </div>
@@ -232,10 +232,10 @@ export default function Clubs() {
                 </thead>
                 <tbody>
                     {trainers.map((trainers, index)=> (
-                        <tr data-index={index}>
-                        <td>{trainers.name}</td>
+                        <tr data-index={index}>                        
                         <td>{trainers.clubName}</td>
                         <td>{trainers.location}</td>
+                        <td>{trainers.name}</td>
                     </tr>
                     ))}                    
                 </tbody>
