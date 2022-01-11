@@ -5,9 +5,7 @@ import './Home.css'
 export default class Home extends Component {
     render() {
         return (
-            <Container className='homePageImage'>
-                           
-                
+            <Container className='homePageImage' > 
                 <h1>Upcoming Events</h1>
                 <div className='mainCarousel'>
                 <Carousel className='eventsCarousel'>

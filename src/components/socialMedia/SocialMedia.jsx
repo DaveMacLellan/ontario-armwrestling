@@ -35,6 +35,7 @@ export default class SocialMedia extends Component {
                     </Card>
                 </CardGroup>                
                 <br></br>
+                <br></br>
                 <CardGroup className='smCardGroupNonPhone'>                    
                     <Card className='smCard1'>
                         <Card.Img className='smCardImage' variant="top" src="https://firebasestorage.googleapis.com/v0/b/ontario-armwrestling.appspot.com/o/Promotions%2FBeStrong.jpg?alt=media&token=26a2b991-e54c-4537-8595-7a48ba294b77" />
