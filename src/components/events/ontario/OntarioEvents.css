@@ -2,3 +2,36 @@
     background-color: #212529;
     color: white;
 }
+
+.eventsCard {
+
+}
+
+.eventsCardImage {
+    height: 300px;
+}
+
+.eventsText {
+    color: white;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    background-color: red;
+}
+
+@media screen and (max-width: 992px) {
+    .eventsCardImage {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .eventsCard {
+        margin: auto;
+        width: 75%;
+    }
+
+    .eventsCardImage {
+        height: 200px;
+    }
+}

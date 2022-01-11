@@ -14,86 +14,25 @@ div {
 }
 
 h1 {
-  color: white;
-}
-
-.lastNextEvents {
-  display: block;
-  width: 100%;
-}
-
-.lastNextEvents a {
-  position: relative;
-  display: flex;
-}
-
-.lastEvent {
-  border-right: 2px black solid;
-  color: red;
-}
-
-.lastEventImage {
-  margin: 5px;
-}
-
-.nextEventImage {
-  margin: 5px;
-}
-
-.eventImg {
-  height: 100px;
-}
-
-.nextEvent {
-  color: red;
-}
-
-.lastEventTitle {
-  position: absolute;
   color: black;
-  margin-bottom: 1rem;
-  line-height: .95rem;
-  text-align: right;
 }
 
-.nextEventTitle {
-  position: absolute;
-  color: black; 
-  margin-bottom: 1rem;
-  line-height: .95rem;
-  text-align: right;
-  margin-left: 65px;
+h3 {
+  color: black;
 }
 
-.lastEventHeading {
-  position: static;
-  margin-top: 1.5rem;
-  text-align: right;
-}
-
-.nextEventHeading {
-  position: static;
-  margin-top: 1.5rem;
-  text-align: left;
-}
-
-.eventTitle {
-  margin-top: 00.75rem;
-  font-size: 2.5rem;
-  line-height: 2rem;
-  text-align: center;
-}
-
-.lastNextEvents {
-  display: flex;
-  justify-content: center;
-  border-bottom: 2px black solid;
+p {
+  color: black;
 }
 
 .mainCarousel {
   display: block;
   width: 800px;
   margin: auto;
+}
+
+.eventsCarouselItem {
+  height: 375px;
 }
 
 @media screen and (max-width: 992px) {

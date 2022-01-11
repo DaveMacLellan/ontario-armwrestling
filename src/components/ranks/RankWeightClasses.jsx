@@ -18,11 +18,11 @@ export default class RanksComp extends Component {
 
     render() {
         const cardInfo = [
-            {image: "https://www.walunderground.com/images/uploads/396/2751_c1__hero@1x__hero@1x.jpg", title: "0-154", class: "LightWeight"},
-            {image: "https://i.ytimg.com/vi/KJCug5f3Asc/maxresdefault.jpg", title: "154-176"},
-            {image: "https://storage.googleapis.com/afs-prod/media/media:adc590cac6ea4dabbee7ba7128b4a109/3000.jpeg", title: "176-198"},
-            {image: "https://www.walunderground.com/images/uploads/1046/406_michaeltodd-devonlarratt__hero@1x.png", title: "198-242"},
-            {image: "https://i.ytimg.com/vi/LhwSiZwn8eA/maxresdefault.jpg", title: "242+"}
+            {image: "https://firebasestorage.googleapis.com/v0/b/ontario-armwrestling.appspot.com/o/ClassImages%2FLightweight.jpg?alt=media&token=8713b5c1-ed19-4120-be63-6aa6720fbc6a", title: "0-154", title2: "0-70", class: "LightWeight"},
+            {image: "https://firebasestorage.googleapis.com/v0/b/ontario-armwrestling.appspot.com/o/ClassImages%2FMiddleweight.jpg?alt=media&token=974f5c92-a465-4fa8-b575-62ccf7bfd08e", title: "154-176", title2: "71-80"},
+            {image: "https://firebasestorage.googleapis.com/v0/b/ontario-armwrestling.appspot.com/o/ClassImages%2FLightHeavyWeight.jpg?alt=media&token=5cbecf92-b257-43be-ac82-3a3ba2a1f79b", title: "176-198", title2: "81-90"},
+            {image: "https://firebasestorage.googleapis.com/v0/b/ontario-armwrestling.appspot.com/o/ClassImages%2FHeavyWeight.jpg?alt=media&token=fc741c01-9c0e-4f36-8ecc-3db5aa8ef9e6", title: "198-242", title2: "91-110"},
+            {image: "https://firebasestorage.googleapis.com/v0/b/ontario-armwrestling.appspot.com/o/ClassImages%2FSupers.jpg?alt=media&token=eac106b0-4ab5-4214-b14f-80986a8c6faf", title: "242+", title2: "110+"}
         ];
 
         if(this.state.whichComponentToShow === "AllRanks") {
@@ -33,7 +33,7 @@ export default class RanksComp extends Component {
                         <p>Select a weight class!</p>
                     </div>
                 <div className='cardGrid'>
-                    <Row xs={1} md={1} lg={3}>                    
+                    <Row xs={1} md={1} lg={2}>                    
                     {cardInfo.map((cardInfo, k) => (
                         <Col key={k} >
                             <Card className='rankWeightCard' bg='dark' text='light' fluid onClick={() => { 
@@ -45,14 +45,18 @@ export default class RanksComp extends Component {
                                 }}>
                                 <Card.Img className='rankWeightCardImage' src={cardInfo.image} fluid />
                                 <Card.ImgOverlay className='cardOverlay' fluid>
-                                    <Card.Text className='cardText' fluid>{cardInfo.title}</Card.Text>
+                                    <Card.Text className='cardText' fluid>{cardInfo.title}lbs</Card.Text>
+                                    <Card.Text className='cardText2' fluid>{cardInfo.title2}kgs</Card.Text>
                                 </Card.ImgOverlay>
                             </Card>
                             <br></br>
                         </Col>
                     ))}            
                     </Row>
-                </div>            
+                </div>
+                <div>
+                    <p>Photos by Umesh Dhurvas. Check out his work at <a href="https://www.instagram.com/be_strong__armwrestling/">Be Strong Armwrestling</a></p>
+                </div>          
                 </Container>
             );
         }
