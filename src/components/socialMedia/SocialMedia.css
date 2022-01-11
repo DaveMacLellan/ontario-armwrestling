@@ -1,0 +1,152 @@
+.smCardGroupNonPhone {
+    border: 1px solid red;
+        margin: auto;
+        width: 100%;
+}
+
+.smCard1 {
+    margin: auto;
+    height: 300px;
+}
+.smCard2 {
+    margin: auto;
+    height: 300px;
+}
+.smCard3 {
+    margin: auto;
+    height: 300px;
+}
+
+.smCardBody {
+
+}
+
+.smCardImage {
+    height: 299px;
+}
+
+.smCardTitle2 {
+    font-size: 20px;
+    margin-top: -20px;
+}
+
+.smCardText2 {
+    color: black;
+    font-size: 20px;
+}
+
+.smCardText3 {
+    color: black;
+    font-size: 30px;    
+}
+
+a.smCardLink:link, a.smCardLink:visited {
+    background-color: red;
+    color: white;
+    padding: 1px 50px;    
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-bottom: -20px;
+}
+
+
+@media screen and (max-width: 992px) {
+    .smCardGroupNonPhone { 
+        border: 1px solid red;        
+        width: 100%;
+        align-items: center;
+        text-align: center;      
+    }
+
+    .smCard1 {
+        width: 100%;
+        height: 210px;
+    }
+    .smCard2 {
+        width: 100%;
+        height: 210px;
+    }
+    .smCard3 {
+        width: 100%;
+        height: 210px;
+    }
+
+    .smCardText2 {
+        color: black;
+        font-size: 12px;
+    }
+
+    .smCardText3 {
+        color: black;
+        font-size: 20px;
+    }
+
+    .smCardBody {
+    }
+    
+    .smCardImage {
+        height: 209px;
+    }
+
+    a.smCardLink:link, a.smCardLink:visited {
+        background-color: red;
+        color: white;
+        padding: 1px 50px;    
+        text-decoration: none;
+        display: flex;
+        text-align: center;
+        margin-bottom: -20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .smCardGroupNonPhone {        
+        flex-direction: column;
+        border: 1px solid red;
+        width: 75%;
+        height: 667px;
+    }
+
+    .smCard1 {
+        width: 100%;
+        height: 290px;
+    }
+    .smCard2 {
+        width: 100%;
+        height: 250px;
+    }
+    .smCard3 {
+        width: 100%;
+        height: 100px;
+    }
+
+    .smCardBody {
+
+    }
+
+    .smCardText2 {
+        color: black;
+        font-size: 12px;
+    }
+
+    .smCardText3 {
+        color: black;
+        font-size: 14px;
+    }
+    
+    .smCardImage {
+        height: 300px;
+        margin: auto;
+    } 
+
+    a.smCardLink:link, a.smCardLink:visited {
+        background-color: red;
+        color: white;
+        padding: 1px 50px;    
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        margin-bottom: -20px;
+    }
+}

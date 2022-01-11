@@ -53,7 +53,7 @@
     }
 }
   
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 600px) {
     .rankCard {
         height: 290px;
         width: 75%;
