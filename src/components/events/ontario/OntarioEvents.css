@@ -20,7 +20,13 @@
 }
 
 @media screen and (max-width: 992px) {
+    .eventsCard {
+        margin: auto;
+        width: 75%;
+    }
+    
     .eventsCardImage {
+        margin:auto;
         height: 200px;
     }
 }
@@ -28,10 +34,22 @@
 @media screen and (max-width: 575px) {
     .eventsCard {
         margin: auto;
-        width: 75%;
+        width: 100%;
     }
 
     .eventsCardImage {
-        height: 200px;
+        height: 220px;
+    }
+
+    .eventsText {
+        font-size: 15px;
+    }
+
+    .listItem {
+        font-size: 15px;
+    }
+
+    .eventLinks {
+        font-size: 15px;
     }
 }

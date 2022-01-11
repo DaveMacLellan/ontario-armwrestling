@@ -43,16 +43,6 @@
         height: 210px;
     }
 
-    .cardText {
-        font-size: 60px;
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%); 
-    }
-
     .rankText {
         font-size: 14px;
     }
@@ -64,30 +54,20 @@
 }
   
 @media screen and (max-width: 575px) {
-  .rankCard {
-      height: 290px;
-      width: 70%;
-      margin: auto;
-  }
-  .rankCardImage {
-      height: 210px;
-  }
-  .cardText {
-      font-size: 60px;
-      margin: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%); 
-  }
-
-  .rankText {
+    .rankCard {
+        height: 290px;
+        width: 75%;
+        margin: auto;
+    }
+    .rankCardImage {
+        height: 210px;
+    }   
+    .athleteName {
+        font-size: 16px;
+        margin-top: -5px;
+    }   
+    .rankText {
       font-size: 14px;
-  }
-
-  .athleteName {
-      font-size: 16px;
-      margin-top: -5px;
-  }
+      color: white;
+    }
 }

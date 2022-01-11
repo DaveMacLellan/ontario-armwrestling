@@ -33,7 +33,7 @@
     position: relative;
     top: 50%;
     left: 50%;    
-    transform: translate(-50%, -90%);    
+    transform: translate(-50%, 20%);    
 }
 
 .cardText2 {
@@ -44,7 +44,7 @@
     position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -90%);    
+    transform: translate(-50%, -20%);    
 }
 
 .rankWeightCardImage {
@@ -62,29 +62,29 @@
     }
 
     .cardText {
-        font-size: 75px;
+        font-size: 60px;
         color: white;
         text-shadow: 0 0 3px #FF0000;
         margin: 0;
         position: relative;
         top: 50%;
         left: 50%;    
-        transform: translate(-50%, -90%);    
+        transform: translate(-50%, 10%);    
     }
     
     .cardText2 {
-        font-size: 75px;
+        font-size: 60px;
         color: white;
         text-shadow: 0 0 3px #FF0000;
         margin: 0;
         position: relative;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -90%);    
+        transform: translate(-50%, -35%);    
     }
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     .rankWeightCard {
         height: 305px;
         width: 100%;
@@ -95,24 +95,24 @@
     }
 
     .cardText {
-        font-size: 60px;
+        font-size: 40px;
         color: white;
         text-shadow: 0 0 3px #FF0000;
         margin: 0;
         position: relative;
         top: 50%;
         left: 50%;    
-        transform: translate(-50%, 15%);    
+        transform: translate(-50%, 50%);    
     }
     
     .cardText2 {
-        font-size: 60px;
+        font-size: 40px;
         color: white;
         text-shadow: 0 0 3px #FF0000;
         margin: 0;
         position: relative;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -30%);    
+        transform: translate(-50%, 10%);    
     }
   }

@@ -30,12 +30,12 @@ export default function OntarioEvents() {
                             </Card.Text>
                         </Card.Body>
                         <ListGroup className="list-group-flush">
-                            <ListGroupItem className='listItem'>Date: {events.Date} Time: {events.Time}</ListGroupItem>                            
+                            <ListGroupItem className='listItem'>Date: {events.Date} <br></br>Time: {events.Time}</ListGroupItem>                            
                             <ListGroupItem className='listItem'>Location: {events.Location} </ListGroupItem>
                         </ListGroup>
                         <Card.Body>
-                            <Card.Link href={events.Eventlink} target="_blank">Event Link</Card.Link>
-                            <Card.Link href={events.Directions} target="_blank">Directions</Card.Link>
+                            <Card.Link className='eventLinks' href={events.Eventlink} target="_blank">Event Link</Card.Link>
+                            <Card.Link className='eventLinks' href={events.Directions} target="_blank">Directions</Card.Link>
                          </Card.Body>
                     </Card>
                     <br></br>
