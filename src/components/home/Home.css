@@ -41,6 +41,10 @@ p {
     width: 100%;
     margin: auto;
   }
+
+  .eventsCarouselItem {
+    height: 325px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -48,5 +52,9 @@ p {
     display: block;
     width: 100%;
     margin: auto;
+  }
+
+  .eventsCarouselItem {
+    height: 260px;
   }
 }
