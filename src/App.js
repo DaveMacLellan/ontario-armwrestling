@@ -4,9 +4,9 @@ import { Layout } from "./Layout";
 import Rankings from './components/Rankings/Rankings';
 import ContentList from './components/Content/ContentList';
 import Events from './components/Events/Events';
-import Home from './components/Home/Home';
+import Home from './components/home/Home'
 import LiftRanks from './components/Rankings/LiftRanks/LiftRanks';
-import Clubs from './components/Clubs/Clubs'
+import Clubs from './components/clubs/Clubs'
 
 
 function App() {

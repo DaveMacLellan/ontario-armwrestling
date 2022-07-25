@@ -1,6 +1,6 @@
 import "./Layout.css"
 import { Outlet } from "react-router-dom"
-import NavBar from "./components/NavBar/NavBar"
+import NavBar from './components/navbar/Navbar'
 
 export function Layout () {
     //<div className="side"><SideBar /></div>
