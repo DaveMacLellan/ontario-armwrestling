@@ -1,21 +1,400 @@
-body {
-    background-color: white;
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #BA181B;
+}
+
+.nav-title-container {
+    display: flex;
+}
+
+.nav-title {
+    margin-left: 30px;
+    color: #F5F3F4;
+    font-family: 'Alata', sans-serif;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links > .link {
+    color: #F5F3F4;
+    text-decoration: none;
+    margin: 0;
+    margin-right: 30px;
+    padding: 7px 10px;
+    font-family: 'Alata', sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.nav-links > .link:hover {
+    padding: 7px 10px;
+    background-color: #E5383B;
+}
+
+.link {
+    font-family: 'Alata', sans-serif;
+}
+  
+.topnav .icon, .topnav .iconX {
+    display: none;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.profile-container:hover {
+    background-color: #E5383B;
+}
+
+.profile-icon {
+    background-color: rgb(139, 4, 4);
+    color: #F5F3F4;
+    border-radius: 100vh;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    margin-right: 10px;
+    padding: 2.5px;
+}
+
+.profile-greeting {
+    color: #F5F3F4;
+    font-family: 'Alata', sans-serif;
+    font-weight: 400;
+}
+
+.profile-link {
+    text-decoration: none;
+}
+
+.dropbtn {
+    background-color: #BA181B;
+    color: #F5F3F4;
+    border: none;
+    margin: 0;
+    margin-right: 30px;
+    padding: 7px 10px;
+    font-family: 'Alata', sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #BA181B;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    left: -20px;
+    z-index: 1;
+}
+  
+.dropdown-content .link {
+    color: #F5F3F4;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 1rem;
+}
+
+.dropdown-content .link:hover {
+    background-color: #E5383B;
+    font-size: 1rem;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    z-index: 2;
+}
+
+.dropdown:hover .dropbtn {background-color: #E5383B;}
+
+@media screen and (max-width: 992px) {
+    .topnav {
+        position: fixed;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .topnav .link, .topnav .dropdown, .topnav .profile-link {
+        display: none;
+    }
+
+    .topnav .icon {
+        display: block;
+    }
+
+    .topnav .icon {
+        padding: 5px 10px;
+        font-size: 1.8rem;
+        position: absolute;
+        color: #F5F3F4;
+        right: 0;
+    }
+
+    .topnav.responsive {
+        position: fixed;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        background-color: #BA181B;
+    }
+
+    .topnav.responsive .icon {
+        display: none;
+        padding: 5px 10px;
+        font-size: 1.8rem;
+        position: absolute;
+        color: #F5F3F4;
+        right: 0;
+    }
+
+    .topnav.responsive .iconX {
+        display: block;
+        padding: 5px 10px;
+        font-size: 1.8rem;
+        position: absolute;
+        color: #F5F3F4;
+        right: 0;
+        margin-right: 3px;
+    }    
+
+    .topnav.responsive .nav-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    } 
+
+    .topnav.responsive .nav-links > .link {
+        display: inline-block;
+        padding: 5px;
+        margin: 0 auto;
+        font-size: 1.3rem;
+        width: 100%;
+        border: 1px solid #E5383B;
+        text-align: center;
+    }
+
+    .topnav.responsive .dropdown {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .topnav.responsive .dropbtn {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: relative;
+        text-align: center;
+        background-color: #BA181B;
+        min-width: 100%;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        margin: 0 auto;
+        margin-top: 5px;
+        margin-left: 20px;
+        z-index: 1;
+    }
+
+    .dropdown-content .link {
+        color: #F5F3F4;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        font-size: 1rem;
+    }
     
-}
+    .dropdown-content .link:hover {
+        background-color: #E5383B;
+        font-size: 1rem;
+    }
 
-#NavbarMain {    
-    background-color: red;
-    border-bottom: 1px solid black;
-}
+    .nav-title {
+        margin: 0;
+        padding: 5px;
+        color: #F5F3F4;
+    }
 
-#BrandText {
-    color: white;
-}
+    .topnav.responsive .profile-link {
+        display: inline-block;
+        width: 100%;
+    }
 
-#NavbarLinks {
-    color: white;
-}
+    .topnav.responsive .profile-link:hover {
+        background-color: #E5383B;
+    }
 
-#basic-nav-dropdown {
-    color: white;
+    .topnav.responsive .profile-container {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .topnav.responsive .profile-icon {
+        background-color: rgb(139, 4, 4);
+        color: #F5F3F4;
+        border-radius: 100vh;
+        height: 25px;
+        width: 25px;
+        text-align: center;
+    }
 }
+    
+@media screen and (max-width: 700px) {
+    .topnav {
+        position: fixed;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .topnav .link, .topnav .dropdown, .topnav .profile-link {
+        display: none;
+    }
+
+    .topnav .icon {
+        display: block;
+    }
+
+    .topnav .icon {
+        padding: 5px 10px;
+        font-size: 1.8rem;
+        position: absolute;
+        color: #F5F3F4;
+        right: 0;
+    }
+
+    .topnav.responsive {
+        position: fixed;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        background-color: #BA181B;
+    }
+
+    .topnav.responsive .icon {
+        display: none;
+        padding: 5px 10px;
+        font-size: 1.8rem;
+        position: absolute;
+        color: #F5F3F4;
+        right: 0;
+    }
+
+    .topnav.responsive .iconX {
+        display: block;
+        padding: 5px 10px;
+        font-size: 1.8rem;
+        position: absolute;
+        color: #F5F3F4;
+        right: 0;
+        margin-right: 3px;
+    }    
+
+    .topnav.responsive .nav-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    } 
+
+    .topnav.responsive .nav-links > .link {
+        display: inline-block;
+        padding: 5px;
+        margin: 0 auto;
+        font-size: 1.3rem;
+        width: 100%;
+        border: 1px solid #E5383B;
+        text-align: center;
+    }
+
+    .topnav.responsive .dropdown {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .topnav.responsive .dropbtn {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: relative;
+        text-align: center;
+        background-color: #BA181B;
+        min-width: 100%;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        margin: 0 auto;
+        margin-top: 5px;
+        margin-left: 20px;
+        z-index: 1;
+    }
+
+    .dropdown-content .link {
+        color: #F5F3F4;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        font-size: 1rem;
+    }
+    
+    .dropdown-content .link:hover {
+        background-color: #E5383B;
+        font-size: 1rem;
+    }
+
+    .nav-title {
+        margin: 0;
+        padding: 5px;
+        color: #F5F3F4;
+    }
+
+    .topnav.responsive .profile-link {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .topnav.responsive .profile-link:hover {
+        background-color: #E5383B;
+    }
+
+    .topnav.responsive .profile-container {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .topnav.responsive .profile-icon {
+        background-color: rgb(139, 4, 4);
+        color: #F5F3F4;
+        border-radius: 100vh;
+        height: 25px;
+        width: 25px;
+        text-align: center;
+    }
+  }

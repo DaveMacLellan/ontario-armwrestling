@@ -1,0 +1,32 @@
+.gains-title {
+    font-family: 'Alata', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #F5F3F4;
+    text-align: center;
+}
+
+.chart-container {
+    border: 1px solid green;
+    width: 900px;
+    height: fit-content;
+    border-radius: 5px;
+    background-color: #F5F3F4;
+    margin: 20px auto;
+}
+
+@media screen and (max-width: 992px){
+
+}
+
+@media screen and (max-width: 700px){
+    .chart-container {
+        border: 1px solid green;
+        width: 90%;
+        height: fit-content;
+        border-radius: 5px;
+        background-color: #F5F3F4;
+        margin: 20px;
+        padding: 5px;
+    }
+}

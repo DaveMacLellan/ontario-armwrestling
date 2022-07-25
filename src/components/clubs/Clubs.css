@@ -1,7 +1,71 @@
-body {
-    background-color: white;
+.club-container {
+    width: 60%;
+    margin: 20px auto;
 }
 
-h1 {
-    color: black;
+.club-title {
+    text-align: center;
+    color: #F5F3F4;
+    font-family: 'Alata', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.table-club {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-club-body {
+
+}
+
+.table-club {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-club tr {
+    background-color: white;
+    font-family: 'Alata', sans-serif;
+}
+
+.table-club td, .table-super th {
+    border: 1px solid #ddd;
+    font-family: 'Alata', sans-serif;
+    padding: 6px;
+}
+
+.table-club tr:nth-child(even){background-color: #fff0f0;}
+.table-club tr:hover {background-color: #E5383B;}
+
+.table-club th {
+    background-color: #BA181B;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    border: 1px solid #262629;
+}
+
+.table-club td {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 700px) {
+    .club-container {
+        width: 95%;
+        margin-top: 60px;
+    }
+
+    .club-title {
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .table-club td {
+        text-align: center;
+        font-size: 0.8rem;
+    }
 }

@@ -1,0 +1,69 @@
+.profile-layout-container {
+    display: grid;
+    grid-template-rows: auto 90vh auto;
+    grid-template-columns: auto auto;
+    grid-template-areas:    "header     header"
+                            "sidebar    main"
+                            "footer     footer";
+  }
+  
+  .header {
+    grid-area: header;
+  }
+  
+  .side {
+    grid-area: sidebar;
+  }
+  
+  .main-content {
+    grid-area: main;
+  }
+
+  .footer {
+    grid-area: footer;
+    width: 100%;
+    height: 3.25rem;
+    background-color: #BA181B;  
+  }
+
+
+.profile-temp-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    min-width: 300px;    
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 1px solid #E5383B;
+    border-radius: 10px;    
+}
+
+.profile-temp-title {
+    color: #F5F3F4;
+    margin-top: 50px;
+}
+
+.profile-temp-soon {
+    color: #F5F3F4;
+    margin-top: 20px;
+}
+
+.profile-temp-description {
+    padding: 0 20px;
+    color: #F5F3F4;
+    text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+    .profile-temp-container {
+        margin-top: 60px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .profile-temp-container {
+        margin-top: 60px;
+    }
+}

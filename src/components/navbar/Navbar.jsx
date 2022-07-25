@@ -1,63 +1,52 @@
-import './Navbar.css';
-import React, { Component } from 'react'
-import { Route, Switch, Link, BrowserRouter as Router } from 'react-router-dom'
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button, Container } from 'react-bootstrap'
-import Home from "../home/Home"
-import Ranks from "../ranks/Ranks"
-import RankWeightClasses from "../ranks/RankWeightClasses"
-import Clubs from "../clubs/Clubs"
-import OntarioEvents from '../events/ontario/OntarioEvents';
-import SocialMedia from '../socialMedia/SocialMedia';
+import "./NavBar.css"
+import {Link} from "react-router-dom"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 
-export default class NavbarComp extends Component {
-    render() {
-        return (
-            <Router>
-                <div>
-                <Navbar expand="md" id="MainNav" id="NavbarMain">
-                    <Container>
-                    <Navbar.Brand as={Link} to={"/home"} id="BrandText">                      
-                        Ontario Armwrestling
-                    </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
-                        <Nav.Link as={Link} to={"/home"} id='NavbarLinks'>Home</Nav.Link>
-                        <Nav.Link as={Link} to={"/ranks"} id='NavbarLinks'>Ranks</Nav.Link>
-                        <Nav.Link as={Link} to={"/clubs"} id='NavbarLinks'>Clubs</Nav.Link>
-                        <NavDropdown title="Events" id="basic-nav-dropdown">
-                        <NavDropdown.Item as={Link} to={"/ontarioevents"} id='NavbarLinksDrop'>Ontario</NavDropdown.Item>
-                        
-                        </NavDropdown>
-                        <Nav.Link as={Link} to={"/socialmedia"} id='NavbarLinks'>Social Media</Nav.Link>
-                    </Nav>
-                    </Navbar.Collapse>
-                    </Container>
-                </Navbar>                
-                </div>
-                <div>
-                    <Switch>
-                        <Route path="/home">
-                            <Home/>
-                        </Route>                        
-                        <Route path="/ranks">
-                            <RankWeightClasses/>
-                        </Route>
-                        <Route path="/clubs">
-                            <Clubs/>
-                        </Route>
-                        <Route path="/ontarioevents">
-                            <OntarioEvents/>
-                        </Route>
-                        <Route path="/socialmedia">
-                            <SocialMedia/>
-                        </Route>
-                        <Route path="/">
-                            <Home/>
-                        </Route>
-                    </Switch>
-                </div>
-            </Router>            
-        );
+export default function NavBar() {
+    function toggleMenu() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
     }
+
+    /*
+
+    <Link className="link" to="/supermatch" onClick={() => toggleMenu()}>Supermatches</Link>  
+
+    <Link to="/profile/dave" className="profile-link">
+                <div className="profile-container">
+                    <p className="profile-icon">L</p>
+                    <p className="profile-greeting">Login</p>
+                </div>
+            </Link>  
+
+    */
+
+    return (
+        <div className="topnav" id="myTopnav">
+            <div className="nav-title-container">
+                <h2 className="nav-title">Ontario Armwrestling</h2>
+                <FontAwesomeIcon className="icon" id="hamburg" icon={faBars} onClick={() => toggleMenu()}/>
+                <FontAwesomeIcon className="iconX"  id="x" icon={faTimes}  onClick={() => toggleMenu()}/>
+            </div>
+            <div className="nav-links" id="myLinks">
+                <Link className="link" to="/home" onClick={() => toggleMenu()}>Home</Link>                
+                <Link className="link" to="/events" onClick={() => toggleMenu()}>Events</Link>
+                <div className="dropdown">
+                    <button className="dropbtn">Rankings</button>
+                    <div className="dropdown-content" id="myDropdown">
+                        <Link className="link" to="/rankings/topten" onClick={() => toggleMenu()}>Top 10 Ranks</Link>
+                        <Link className="link" to="/rankings/lifts" onClick={() => toggleMenu()}>Lift Rankings</Link>
+                    </div>
+                </div>                                
+                <Link className="link" to="/content" onClick={() => toggleMenu()}>Content</Link>
+                <Link className="link" to="/clubs" onClick={() => toggleMenu()}>Clubs</Link> 
+            </div>
+                      
+        </div>    
+    )
 }

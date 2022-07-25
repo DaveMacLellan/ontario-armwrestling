@@ -1,6 +1,5 @@
 import './Clubs.css'
-import React, { Component } from 'react'
-import { Container, Table, Badge } from 'react-bootstrap'
+import React from 'react'
 
 export default function Clubs() {
     const trainers = [
@@ -217,11 +216,9 @@ export default function Clubs() {
     ];
     
     return (        
-        <Container className='clubBack'>
-            <div>
-                <h1>Clubs</h1>
-            </div>
-            <Table variant="dark" responsive>
+        <div className='club-container'>
+            <h1 className='club-title'>Clubs</h1>
+            <table className='table-club'>
                 <thead>
                     <tr>
                         <th>Club Name</th>
@@ -229,9 +226,9 @@ export default function Clubs() {
                         <th>Club Lead</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className='table-club-body'>
                     {trainers.map((trainers, index)=> (
-                        <tr data-index={index}>                        
+                        <tr key={index}>                        
                         <td>{trainers.clubName}</td>
                         <td>{trainers.location}</td>
                         <td>{trainers.name}</td>
@@ -239,7 +236,7 @@ export default function Clubs() {
                     ))}                    
                 </tbody>
 
-            </Table>
-        </Container>
+            </table>
+        </div>
     )
 }

@@ -1,0 +1,207 @@
+.supermatch-page {
+    height: auto;
+    min-width: 100%;
+    width: 100%;
+    background-color: #262629;
+    margin: 0 auto;
+}
+
+.supermatch-title {
+    width: fit-content;
+    color: #F5F3F4;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    font-family: 'Alata', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.supermatch-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto; 
+    min-width: 30%;
+    width: 600px;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.supermatch-athlete-card-container {
+    display: flex;
+    justify-content: center;   
+    min-width: 100%;
+    width: 100%;
+    height: 300px;
+    border: 1px solid #BA181B;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.supermatch-athlete-card-left{
+    width: 37%;
+    height: 100%;
+}
+
+.supermatch-athlete-card-left-image{        
+    height: 100%;
+}   
+
+.supermatch-athlete-card-right{
+    width: 37%;
+    height: 100%;    
+}
+
+.supermatch-athlete-card-right-image {
+    height: 100%;
+    
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    width: 26%;
+    background-color: #F5F3F4;
+}
+
+.center-brand {
+    background-color: #BA181B;
+    height: 40%;
+    text-align: center;
+}
+
+.supermatch-athlete-stats{
+    height: 50%;
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+    background-color: #F5F3F4;
+}
+
+.supermatch-athlete-stats > p {
+    margin-top: 10px;
+    font-family: 'Alata', sans-serif;
+    font-weight: 400;
+}
+
+.supermatch-athlete-stats-category{
+    color: #E5383B;
+}
+
+.supermatch-athlete-card-container-nonMain {
+    display: flex;
+    justify-content: center;
+    min-width: 100%;
+    width: 100%;
+    height: 300px;
+    border: 1px solid #BA181B;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.center-container-nonMain {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    width: 26%;
+    background-color: #F5F3F4;
+}
+
+@media screen and (max-width: 700px) {
+    .supermatch-page {
+        margin-top: 40px;
+    }
+
+    .supermatch-title {
+        width: fit-content;
+        color: #F5F3F4;
+        margin: 0px auto;
+        margin-bottom: 20px;
+        padding-top: 20px;
+        font-family: 'Alata', sans-serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    .supermatch-container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto; 
+        min-width: 360px;
+        width: 360px;
+        height: fit-content;
+        overflow: hidden;
+    }
+
+    .supermatch-athlete-card-container {
+        display: flex;
+        justify-content: center;   
+        min-width: 100%;
+        width: 100%;
+        height: 300px;
+        border: 1px solid #BA181B;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .supermatch-athlete-card-left{
+        width: 37%;
+        height: 100%;
+    }
+    
+    .supermatch-athlete-card-left-image{        
+        height: 100%;
+        object-position: -10px 10%;
+    }   
+    
+    .supermatch-athlete-card-right{
+        width: 37%;
+        height: 100%;    
+    }
+    
+    .supermatch-athlete-card-right-image {
+        height: 100%;
+        object-position: -35px 10%;
+    }
+    
+    .center-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 25%;
+        background-color: #F5F3F4;
+    }
+
+    .supermatch-athlete-stats > p {
+        margin-top: 10px;
+        font-family: 'Alata', sans-serif;
+        font-weight: 400;
+        font-size: 0.7rem;
+    }
+
+    .center-brand h1, .center-brand h3 {
+        font-family: 'Alata', sans-serif;
+        font-weight: 400;
+        font-size: 1.4rem;
+        color: #F5F3F4;
+    }
+
+    .supermatch-athlete-card-container-nonMain {
+        display: flex;
+        justify-content: center;
+        min-width: 100%;
+        width: 100%;
+        height: 300px;
+        border: 1px solid #BA181B;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .center-container-nonMain {
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        width: 25%;
+        background-color: #F5F3F4;
+    }
+}
