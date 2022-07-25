@@ -34,7 +34,6 @@ import Profile from './components/Profile/Profile';
           <Route path="/" element={<Layout />}>
             <Route path="/" element={<Home />}/>
             <Route path="/home" element={<Home />}/>
-            
             <Route path="/rankings/" element={<Rankings />}/>
             <Route path="/rankings/topten" element={<Rankings />}/>
             <Route path="/rankings/lifts" element={<LiftRanks />}/>
