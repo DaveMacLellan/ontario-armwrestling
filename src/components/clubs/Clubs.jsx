@@ -192,7 +192,7 @@ export default function Clubs() {
         {
             "id": "32",
             "name": "Brad Wade / Brian Desormeaux",
-            "clubName": "",
+            "clubName": "Rock City Reapers",
             "location": "Sudbury area"
         },
         {
