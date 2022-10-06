@@ -19,7 +19,7 @@ export default function Clubs() {
             "id": "3",
             "name": "Magda Kaczmarek",
             "clubName": "",
-            "location": "Barrie / Angus"
+            "location": "Angus"
         },
         {
             "id": "4",

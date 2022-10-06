@@ -13,7 +13,7 @@ export default function Rankings(){
             const data = await getDocs(partsRef);
             setRanks(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
         };
-
+        
         getRanks()
     }, []);
 
@@ -33,46 +33,46 @@ export default function Rankings(){
                 <p onClick={() => scrollTo('overall-right')}>Womans Overall</p>
             </div>
             <div className="rankings-container">
-                <div className="rankings-super-right" >                    
-                    {ranks[0] && <RankingTable id={"super-right"} test={ranks[0].pullerRanks.super.right}  title={"Super Heavyweight RIGHT(242+lbs)"} name={"super"}  />}
+                <div className="rankings-super-right" id="super-right" >                    
+                    {ranks[1] && <RankingTable test={ranks[1].pullerRanks.super.right}  title={"Super Heavyweight RIGHT(242+lbs)"} name={"super"}  />}
                 </div>
                 <div className="rankings-super-left" id="super-left">
-                    {ranks[0] && <RankingTable test={ranks[0].pullerRanks.super.left} title={"Super Heavyweight LEFT(242+lbs)"} name={"super"} />}
+                    {ranks[1] && <RankingTable test={ranks[1].pullerRanks.super.left} title={"Super Heavyweight LEFT(242+lbs)"} name={"super"} />}
                 </div>
                 <div className="break"></div>  
                 <div className="rankings-heavy-right" id="heavy-right">                    
-                    {ranks[0] && <RankingTable test={ranks[0].pullerRanks.heavy.right} title={"Heavyweight RIGHT(198-242lbs)"} name={"heavy"} />}
+                    {ranks[1] && <RankingTable test={ranks[1].pullerRanks.heavy.right} title={"Heavyweight RIGHT(198-242lbs)"} name={"heavy"} />}
                 </div>
                 <div className="rankings-heavy-left" id="heavy-left">
-                    {ranks[0] && <RankingTable test={ranks[0].pullerRanks.heavy.left} title={"Heavyweight LEFT(198-242lbs)"} name={"heavy"}/>}
+                    {ranks[1] && <RankingTable test={ranks[1].pullerRanks.heavy.left} title={"Heavyweight LEFT(198-242lbs)"} name={"heavy"}/>}
                 </div>
                 <div className="break"></div>
                 <div className="rankings-lightheavy-right" >                    
-                    {ranks[0] && <RankingTable id={"lightheavy-right"} test={ranks[0].pullerRanks.lightHeavy.right} title={"Light Heavyweight RIGHT(176-198lbs)"} name={"lightHeavy"}/>}
+                    {ranks[1] && <RankingTable id={"lightheavy-right"} test={ranks[1].pullerRanks.lightHeavy.right} title={"Light Heavyweight RIGHT(176-198lbs)"} name={"lightHeavy"}/>}
                 </div>
                 <div className="rankings-lightheavy-left" id="lightheavy-left">
-                    {ranks[0] && <RankingTable test={ranks[0].pullerRanks.lightHeavy.left} title={"Light Heavyweight LEFT(176-198lbs)"} name={"lightHeavy"}/>}
+                    {ranks[1] && <RankingTable test={ranks[1].pullerRanks.lightHeavy.left} title={"Light Heavyweight LEFT(176-198lbs)"} name={"lightHeavy"}/>}
                 </div>
                 <div className="break"></div>  
                 <div className="rankings-middle-right" id="middle-right">                    
-                    {ranks[0] && <RankingTable test={ranks[0].pullerRanks.middle.right} title={"Middleweight RIGHT(154-176lbs)"} name={"middle"}/>}
+                    {ranks[1] && <RankingTable test={ranks[1].pullerRanks.middle.right} title={"Middleweight RIGHT(154-176lbs)"} name={"middle"}/>}
                 </div>
                 <div className="rankings-middle-left" id="middle-left">
-                    {ranks[0] && <RankingTable test={ranks[0].pullerRanks.middle.left} title={"Middleweight LEFT(154-176lbs)"} name={"middle"}/>}
+                    {ranks[1] && <RankingTable test={ranks[1].pullerRanks.middle.left} title={"Middleweight LEFT(154-176lbs)"} name={"middle"}/>}
                 </div>
                 <div className="break"></div>
                 <div className="rankings-light-right" id="light-right">                    
-                    {ranks[0] && <RankingTable test={ranks[0].pullerRanks.light.right} title={"Lightweight RIGHT(0-154lbs)"} name={"light"}/>}
+                    {ranks[1] && <RankingTable test={ranks[1].pullerRanks.light.right} title={"Lightweight RIGHT(0-154lbs)"} name={"light"}/>}
                 </div>
                 <div className="rankings-light-left" id="light-left">
-                    {ranks[0] && <RankingTable test={ranks[0].pullerRanks.light.left} title={"Lightweight LEFT(0-154lbs)"} name={"light"}/>}
+                    {ranks[1] && <RankingTable test={ranks[1].pullerRanks.light.left} title={"Lightweight LEFT(0-154lbs)"} name={"light"}/>}
                 </div>
                 <div className="break"></div>
                 <div className="rankings-light-right" id="overall-right">                    
-                    {ranks[0] && <RankingTable test={ranks[0].pullerRanks.womansOverall.right} title={"Womans Overall RIGHT"} name={"womansOverall"}/>}
+                    {ranks[1] && <RankingTable test={ranks[1].pullerRanks.womansOverall.right} title={"Womans Overall RIGHT"} name={"womansOverall"}/>}
                 </div>
                 <div className="rankings-light-left" id="overall-left">
-                    {ranks[0] && <RankingTable test={ranks[0].pullerRanks.womansOverall.left} title={"Womans Overall LEFT"} name={"womansOverall"}/>}
+                    {ranks[1] && <RankingTable test={ranks[1].pullerRanks.womansOverall.left} title={"Womans Overall LEFT"} name={"womansOverall"}/>}
                 </div>
             </div>
             <div className="jumpBack-container">
