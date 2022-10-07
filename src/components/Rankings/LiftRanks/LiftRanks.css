@@ -32,6 +32,16 @@
     height: auto;
 }
 
+.table-caption-lift {
+    border: 1px solid #262629;
+    margin-bottom: -1px;
+    background-color: #BA181B;
+    font-family: 'Alata', sans-serif;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 5px 5px 0px 0px;
+}
+
 @media screen and (max-width: 992px) {
     .liftRanks-container {
         margin-top: 60px;
