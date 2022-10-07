@@ -36,10 +36,43 @@
     .liftRanks-container {
         margin-top: 60px;
     }
+
+    .rankings-container {
+        width: 90%;
+        gap: 10px;
+    }
+
+    .table-caption-lift {
+        border: 1px solid #262629;
+        margin-bottom: -1px;
+        background-color: #BA181B;
+        color: white;
+        font-size: 1.5rem;
+        border-radius: 5px 5px 0px 0px;
+    }
 }
 
 @media screen and (max-width: 700px) {
     .liftRanks-container {
         margin-top: 60px;
+    }
+
+    .rankings-container {
+        width: 80%;
+        gap: 10px;
+    }
+
+    .rankings-lift {
+        width: 100%;
+    }
+
+    .table-caption-lift {
+        border: 1px solid #262629;
+        margin-bottom: -1px;
+        background-color: #BA181B;
+        font-family: 'Alata', sans-serif;
+        color: white;
+        font-size: 1.5rem;
+        border-radius: 5px 5px 0px 0px;
     }
 }
