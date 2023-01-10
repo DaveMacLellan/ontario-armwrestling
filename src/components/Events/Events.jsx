@@ -28,7 +28,7 @@ export default function Events() {
         eventImage={event.eventImage}
         eventUrl={event.url}
     />).sort(function(a,b){
-        return new Date(b.props.date) - new Date(a.props.date)
+        return new Date(a.date) - new Date(b.date)
     })
     
     return(
