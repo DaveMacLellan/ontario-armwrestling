@@ -33,7 +33,9 @@ export default function Events() {
     */
     const eventList = events.sort(function(a,b){
         return new Date(a.props.date) - new Date(b.props.date)
-    }).map(event => 
+    })
+
+    eventList.map(event => 
         <Event 
             key={event.id} 
             name={event.Name} 
