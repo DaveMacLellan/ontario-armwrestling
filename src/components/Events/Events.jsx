@@ -17,7 +17,7 @@ export default function Events() {
     }, []);
 
     
-    const eventList = events.map(event => 
+    /*const eventList = events.map(event => 
     <Event 
         key={event.id} 
         name={event.Name} 
@@ -30,6 +30,20 @@ export default function Events() {
     />).sort(function(a,b){
         return new Date(a.props.date) - new Date(b.props.date)
     })
+    */
+    const eventList = events.sort(function(a,b){
+        return new Date(a.props.date) - new Date(b.props.date)
+    }).map(event => 
+        <Event 
+            key={event.id} 
+            name={event.Name} 
+            address={event.Address}
+            info={event.Info}
+            date={event.Date}
+            time={event.Time}
+            eventImage={event.eventImage}
+            eventUrl={event.url}
+    />)
     
     return(
         <div className="events-page">
